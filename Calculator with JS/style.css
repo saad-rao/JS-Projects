@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* Modern Calculator Styles */
+:root {
+  --primary-bg: #bac0c9;
+  --calculator-bg: #ffffff;
+  --button-bg: #f8f9fa;
+  --button-text: #2c3e50;
+  --operator-bg: #4834d4;
+  --operator-text: #ffffff;
+  --button-hover: #e2e6ea;
+  --operator-hover: #686de0;
+  --input-bg: #eef2f7;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  background-color: var(--primary-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+}
+
+.heading {
+  color: var(--button-text);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.container {
+  background-color: var(--calculator-bg);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 20px var(--shadow);
+  width: 300px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+  gap: 0.5rem;
+}
+
+.input {
+  width: 100%;
+  height: 50px;
+  background-color: var(--input-bg);
+  border: none;
+  border-radius: 10px;
+  padding: 0 1rem;
+  font-size: 1.8rem;
+  text-align: right;
+  margin-bottom: 1rem;
+  color: var(--button-text);
+}
+
+.button {
+  width: 65px;
+  height: 65px;
+  border: none;
+  border-radius: 12px;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.button:nth-child(4) {
+  background-color: var(--operator-bg);
+  color: var(--operator-text);
+}
+
+.button:hover {
+  background-color: var(--button-hover);
+  transform: translateY(-2px);
+}
+
+.button:nth-child(4):hover {
+  background-color: var(--operator-hover);
+}
+
+.row:first-of-type .button {
+  background-color: #ff7675;
+  color: white;
+}
+
+.row:first-of-type .button:hover {
+  background-color: #ff5252;
+}
+
+.row:last-of-type .button:nth-child(3) {
+  background-color: #00b894;
+  color: white;
+}
+
+.row:last-of-type .button:nth-child(3):hover {
+  background-color: #00a884;
+}
+
+.button:active {
+  transform: translateY(0);
+  opacity: 0.8;
+}
