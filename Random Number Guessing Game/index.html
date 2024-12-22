@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="lives">❤️❤️❤️</div>
+        <div id="message">Guess a number between 1 and 5!</div>
+        <div id="buttons">
+            <button onclick="handleGuess(1)">1</button>
+            <button onclick="handleGuess(2)">2</button>
+            <button onclick="handleGuess(3)">3</button>
+            <button onclick="handleGuess(4)">4</button>
+            <button onclick="handleGuess(5)">5</button>
+        </div>
+        <button id="restart" onclick="restartGame()" style="display: none;">Play Again</button>
+    </div>
+
+      <script src="app.js"></script>
+
+</body>
+</html>
