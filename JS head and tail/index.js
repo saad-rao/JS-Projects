@@ -20,15 +20,15 @@ let userInput = prompt("head or tail").toLowerCase();
 
 if (userInput === "head" || userInput === "tail"){
     if(userInput === getValue){
-        alert(`user ${getValue} wins!`)
+        swal.fire(`user ${getValue} wins!`)
     }
 
     else{
-        alert(`computer ${getValue} wins!`)
+        swal.fire(`computer ${getValue} wins!`)
     }
 }
 else{
-    alert(`invalid value ${userInput}` )
+    swal.fire(`invalid value ${userInput}` )
 }
 
 
@@ -36,7 +36,7 @@ else{
 //Below is the another way of doing this 
 
 let player1 = Number (prompt("Enter the Haid or tail"))
-// let player2 = Number (prompt("Enter the Tails"))
+let player2 = Number (prompt("Enter the Tails"))
 
 let randomNum = Math.random()*1
 // console.log(randomNum);
@@ -46,10 +46,10 @@ let removeDecimal = Math.round(randomNum)
 console.log(removeDecimal);
 
 if(player1 === 0 || player1 === "Heads".toLowerCase() || player1 === "Tails".toLowerCase() ){
-    alert("Heads win");
+   swal.fire("Heads win");
     
 }
 
 else{
-    alert("Tails win")
+    swal.fire("Tails win")
 }
