@@ -30,3 +30,26 @@ if (userInput === "head" || userInput === "tail"){
 else{
     alert(`invalid value ${userInput}` )
 }
+
+
+
+//Below is the another way of doing this 
+
+let player1 = Number (prompt("Enter the Haid or tail"))
+// let player2 = Number (prompt("Enter the Tails"))
+
+let randomNum = Math.random()*1
+// console.log(randomNum);
+
+
+let removeDecimal = Math.round(randomNum)
+console.log(removeDecimal);
+
+if(player1 === 0 || player1 === "Heads".toLowerCase() || player1 === "Tails".toLowerCase() ){
+    alert("Heads win");
+    
+}
+
+else{
+    alert("Tails win")
+}
