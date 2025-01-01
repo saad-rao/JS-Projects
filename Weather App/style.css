@@ -1,0 +1,163 @@
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #57a0ee, #3383d8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.main {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s ease;
+}
+
+.main:hover {
+    transform: translateY(-5px);
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.search {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 2rem;
+}
+
+#search-inp {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+#search-inp::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#search-inp:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+#search-btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    background: white;
+    color: #3383d8;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#search-btn:hover {
+    background: #f0f0f0;
+    transform: scale(1.05);
+}
+
+.weather-info {
+    text-align: center;
+    color: white;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#city-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+#city-time {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1.5rem;
+}
+
+#city-temp {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+#city-humidity {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .main {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    .search {
+        flex-direction: column;
+    }
+
+    #search-btn {
+        width: 100%;
+    }
+
+    #city-name {
+        font-size: 1.75rem;
+    }
+
+    #city-temp {
+        font-size: 3rem;
+    }
+}
+
+/* Weather condition-based backgrounds */
+body.clear {
+    background: linear-gradient(135deg, #57a0ee, #3383d8);
+}
+
+body.cloudy {
+    background: linear-gradient(135deg, #807e7e, #5c5c5c);
+}
+
+body.rainy {
+    background: linear-gradient(135deg, #435970, #2c3e50);
+}
